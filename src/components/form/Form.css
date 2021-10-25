@@ -1,0 +1,59 @@
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1.5rem;
+}
+.form__field {
+	position: relative;
+	width: 100%;
+	height: 3rem;
+}
+
+.form__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #e1e5ee;
+	border-radius: 0.5rem;
+	font-family: inherit;
+	font-size: inherit;
+	color: rgb(0, 0, 0);
+	outline: none;
+	padding: 1.25rem;
+	background: none;
+}
+
+.form__input:hover {
+	border-color: #30e3ca;
+}
+
+.form__input:focus,
+.form__input:not(:placeholder-shown).form__input:not(:focus) {
+	border-color: #30e3ca;
+}
+
+.form__label {
+	position: absolute;
+	left: 1rem;
+	top: 0.8rem;
+	padding: 0 0.5rem;
+	color: #40514e;
+	cursor: text;
+	-webkit-transition: top 200ms ease-in, left 200ms ease-in,
+		font-size 200ms ease-in;
+	transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+	background-color: #fff;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+	top: -0.5rem;
+	font-size: 0.8rem;
+	left: 0.8rem;
+}
+
+.form .button {
+	width: 100%;
+}
